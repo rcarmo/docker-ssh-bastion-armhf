@@ -1,9 +1,10 @@
 Protocol 2
 Port 2211
-LoginGraceTime 1m
+LoginGraceTime 15
 PermitRootLogin no
 StrictModes yes
 MaxAuthTries 3
+MaxStartups 5
 PubkeyAuthentication yes
 AuthorizedKeysFile .ssh/authorized_keys
 PasswordAuthentication no

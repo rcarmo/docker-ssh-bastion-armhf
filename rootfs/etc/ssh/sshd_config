@@ -1,0 +1,22 @@
+Protocol 2
+Port 2211
+LoginGraceTime 1m
+PermitRootLogin no
+StrictModes yes
+MaxAuthTries 3
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+PermitEmptyPasswords no
+AllowAgentForwarding yes
+AllowTcpForwarding yes
+# Let me have a TTY for diagnostics
+#ForceCommand /bin/nologin
+PermitTTY yes
+PrintMotd no
+TCPKeepAlive yes
+PermitUserEnvironment no
+PidFile /tmp/sshd.pid
+PermitTunnel no
+AllowUsers bastion

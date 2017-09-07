@@ -11,17 +11,15 @@ RUN apk add --update \
 
 ADD rootfs /
 
-
 # I need to be able to login for diagnostic
 RUN adduser -D -s /bin/bash bastion
 # Without login
 #RUN adduser -D -s /sbin/nologin bastion
 RUN passwd -u -d bastion \
- && mkdir /home/bastion/.ssh \
- && chown -R bastion:bastion /home/bastion/.ssh \
+ && chown -R bastion:bastion /home/bastion/ \
  && chmod -R 0700 /home/bastion/.ssh
 
-# Mount our set of keys
+# Mount point for our own keys
 VOLUME /home/bastion/.ssh
 
 # If you want to bake in authorized_keys instead:

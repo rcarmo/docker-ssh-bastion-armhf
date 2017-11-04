@@ -2,7 +2,7 @@
 
 A Docker container with a tailored SSH server, to act as a bastion host. Some of the things below can be easily tuned to your liking.
 
-* [x] Experimental `mosh` configuration
+* [x] Experimental `mosh` configuration (removed because `perl` is a security risk)
 * [x] set SSH client defaults to perform agent forwarding by default, as well as a few other niceties I need.
 * [x] Use `bash` instead of `busybox` to reduce number of commands available (Alpine uses `busybox` for everything, and I don't want people to be able to do `busybox ls`).
 * [x] Lock down capabilities to absolute minimum

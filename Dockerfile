@@ -3,7 +3,6 @@ FROM rcarmo/alpine:3.6-armhf
 RUN apk add --update \
     bash \
     openssh \
-    mosh \
     dumb-init \
  && ssh-keygen -A \
  && chown -R sshd:sshd /etc/ssh \

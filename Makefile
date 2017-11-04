@@ -21,7 +21,7 @@ daemon:
         --net=host \
         --cap-add SETGID --cap-add SETUID --cap-add SYS_CHROOT --cap-add KILL --cap-add SYS_TTY_CONFIG --cap-add CHOWN --cap-add MKNOD --cap-add FOWNER \
 	-v ${HOME}/.ssh/authorized_keys:/home/bastion/.ssh/authorized_keys:ro \
-	-p 2211:2211 ${IMAGE_NAME}
+	-p 2211:2211 -p 60000-61000:60000-61000/udp ${IMAGE_NAME}
 
 push:
 	docker push ${IMAGE_NAME}

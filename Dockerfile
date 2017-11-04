@@ -3,6 +3,7 @@ FROM rcarmo/alpine:3.6-armhf
 RUN apk add --update \
     bash \
     openssh \
+    mosh \
     dumb-init \
  && ssh-keygen -A \
  && chown -R sshd:sshd /etc/ssh \
@@ -30,6 +31,6 @@ VOLUME /home/bastion/.ssh
 RUN chmod 700 /usr/bin/harden.sh \
  && /usr/bin/harden.sh
 
-EXPOSE 2211
+EXPOSE 2211 60000-61000/udp
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["/usr/sbin/sshd", "-D", "-e"]

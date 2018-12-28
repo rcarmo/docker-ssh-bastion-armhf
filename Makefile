@@ -1,4 +1,4 @@
-IMAGE_NAME=rcarmo/bastion:armhf
+IMAGE_NAME=rcarmo/bastion:arm32v7
 HOSTNAME=bastion
 build: Dockerfile
 	docker build -t ${IMAGE_NAME} .

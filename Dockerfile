@@ -1,4 +1,4 @@
-FROM rcarmo/alpine:3.6-armhf
+FROM arm32v7/alpine:3.12
 
 RUN apk add --update \
     bash \
